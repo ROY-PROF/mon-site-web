@@ -1,0 +1,524 @@
+/* ===== Réinitialisation et variables ===== */
+:root {
+    --main-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --link-color: #3498db;
+    --link-hover: #2980b9;
+    --border-color: #bdc3c7;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    --font-main: "Georgia", "Times New Roman", serif;
+    --font-secondary: "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Empêche tout débordement horizontal sur mobile */
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-main);
+    background-image: url('../fond.png');
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: #f7f3ea;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow-x: hidden;
+}
+
+/* Les images ne dépassent jamais de leur conteneur */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== En-tête ===== */
+
+header {
+    text-align: justify;
+    margin: 30px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+/* ===== Navigation ===== */
+nav {
+    margin-top: 15px;
+    padding: 20px 10px;
+    background-color: #8A9A5B;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-family: Times;
+    font-weight: 500;
+    font-size: 1.05em;
+    padding: 5px 10px;
+    transition: color 0.2s, background-color 0.2s;
+    border-radius: 3px;
+}
+
+nav a:hover {
+    color: white;
+    background-color: #9caf88;
+}
+
+/* ===== Contenu principal ===== */
+main {
+    padding: 20px 0;
+}
+
+.intro,
+.contact {
+    text-align: justify;
+    color: white;
+    margin: 0 auto 40px;
+    padding: 25px;
+    background-image: url('../fond_tableau.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    /* width en % avec une largeur MAX (pas min) pour rester lisible sur grand écran
+       sans jamais forcer un débordement sur petit écran */
+    width: 100%;
+    max-width: 900px;
+}
+
+.contact {
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: white;
+}
+
+/* ===== Cartes des sections (accueil) ===== */
+.sections {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.section-card {
+    background-image: url('../logo_carte.png');
+    border-radius: 5px;
+    padding: 25px;
+    width: 45%;
+    min-width: 280px;
+    max-width: 100%;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    color: var(--main-color);
+}
+
+.section-card h3 a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.section-card h3 a:hover {
+    text-decoration: underline;
+}
+
+.section-card.college,
+.section-card.lycee {
+    background-image: url('../logo_carte.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card::before {
+    content: "";
+    width: 80px;
+    height: 15px;
+    background: #d9d6aa;
+}
+
+/* ===== Listes de cours/ressources ===== */
+.cours-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.niveau,
+.ressource {
+    background: #D3CDC3;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 20px;
+    width: 45%;
+    min-width: 280px;
+    max-width: 100%;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+.niveau h3,
+.ressource h3 {
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    color: var(--main-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.niveau ul,
+.ressource ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.niveau li,
+.ressource li {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.niveau li:hover,
+.ressource li:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.niveau a,
+.ressource a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: var(--font-secondary);
+}
+
+.niveau a:hover,
+.ressource a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Pied de page ===== */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    border-top: 1px solid var(--border-color);
+    color: #666;
+    font-size: 0.9em;
+    font-family: var(--font-secondary);
+}
+
+/* ===== Chapitres ===== */
+.chapitres {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.chapitres h2 {
+    margin-top: 35px;
+}
+
+.chapitre-card {
+    background-color: #D3CDC3;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.chapitre-card h3 {
+    margin-top: 0;
+}
+
+.liens-pdf {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.liens-pdf a {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: black;
+    background-color: #eeeeee;
+}
+
+.liens-pdf a:hover {
+    opacity: 0.7;
+}
+
+/* ===== Détails / résumé ===== */
+details {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Menus déroulants de chapitres (page 6e) : fond transparent */
+.menu-chapitres details {
+    background: transparent;
+    box-shadow: none; /* l'ombre portée n'a plus de sens sans fond, retirez cette ligne si vous voulez la garder */
+}
+
+summary {
+    cursor: pointer;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 10px;
+}
+
+summary:hover {
+    color: #0066cc;
+}
+
+details[open] summary {
+    margin-bottom: 15px;
+}
+
+/* ===== Page 6e ===== */
+.page-6e {
+    display: flex;
+    gap: 40px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap; /* permet à l'image de passer en dessous sur mobile */
+}
+
+.menu-chapitres {
+    flex: 2;
+    min-width: 250px;
+}
+
+.image-6e {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.image-6e img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
+}
+
+/* ===== Grille des leçons d'agrégation ===== */
+.ressources {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.ressources .chapitre-card {
+    background-color: transparent;
+    background-image: url('../fond_carte_agreg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    box-shadow: none;
+    padding: 20px;
+    width: 100%;
+    min-height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.ressources .chapitre-card:hover {
+    transform: translateY(-5px);
+}
+
+.ressources .chapitre-card a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    width: 90%;
+}
+
+/* ===== Menus déroulants ===== */
+nav ul li {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background: white;
+    min-width: 180px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 15px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background: #d3d3d3; /* Gris clair */
+    color: var(--text-color); /* Ou une autre couleur de texte si nécessaire */
+}
+
+/* Au survol (PC) ET au clic/tactile via la classe .active (à ajouter en JS) */
+.dropdown:hover .dropdown-menu,
+.dropdown.active .dropdown-menu {
+    display: block;
+}
+
+/* ===== Responsive : tablette ===== */
+@media (max-width: 900px) {
+    .intro,
+    .contact {
+        max-width: 100%;
+    }
+}
+
+/* ===== Responsive : mobile ===== */
+@media (max-width: 768px) {
+    .sections,
+    .cours-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* La grille de ressources passe à 1 colonne sur mobile */
+    .ressources {
+        grid-template-columns: 1fr;
+    }
+
+    .section-card,
+    .niveau,
+    .ressource {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .intro,
+    .contact {
+        width: 100%;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .page-6e {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .image-6e {
+        order: -1; /* image au-dessus du menu sur mobile, optionnel */
+    }
+
+    /* Sur tactile, le menu déroulant reste fermé par défaut au survol
+       (qui n'existe pas) : on le rend accessible en position statique
+       si aucun JS n'est ajouté pour gérer le clic */
+    .dropdown-menu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0 12px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .section-card,
+    .niveau,
+    .ressource,
+    .intro,
+    .contact,
+    .chapitre-card {
+        padding: 15px;
+    }
+}
