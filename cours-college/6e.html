@@ -72,6 +72,43 @@
 
 
 <section class="menu-chapitres">
+
+	
+    <div class="chapitre-card">
+
+        <div class="recherche-conseils">
+            <h3>🎯 Mes conseils pour progresser</h3>
+
+            <p>
+                Saisis le code indiqué sur ta fiche pour obtenir
+                des conseils adaptés à tes besoins.
+            </p>
+
+            <form id="formulaire-conseils">
+                <label for="code-eleve">Mon code personnel :</label>
+
+                <input
+                    type="text"
+                    id="code-eleve"
+                    placeholder="Exemple : 6E-0001"
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit">
+                    Obtenir mes conseils
+                </button>
+            </form>
+
+            <p id="message-conseils" role="status"></p>
+
+            <button id="telecharger-pdf" type="button" hidden>
+                Télécharger mes conseils en PDF
+            </button>
+        </div>
+
+    </div>
+
 	<div class="chapitre-card">
 
             <div class="liens-pdf">
@@ -378,6 +415,336 @@
 
 </footer>
 
+
+
+<!-- Bibliothèque permettant de créer des PDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+const conseilsParCode = {
+    "6E-K3F58": {
+        titre: "AWAD SIDDIG Yasmine",
+        conseils: [
+            ""
+        ]
+    },
+
+    "6E-R7N24": {
+        titre: "BOSSUT Nina",
+        conseils: [
+            "Revoir le sens du numérateur et du dénominateur.",
+            "S'entraîner à simplifier des fractions.",
+            "Reprendre les exercices corrigés du cours.",
+            "Vérifier que les réponses sont cohérentes."
+        ]
+    },
+
+    "6E-B9W61": {
+        titre: "BOUYBAOUEN Mohamed",
+        conseils: [
+            "Revoir le sens du numérateur et du dénominateur.",
+            "S'entraîner à simplifier des fractions.",
+            "Reprendre les exercices corrigés du cours.",
+            "Vérifier que les réponses sont cohérentes."
+        ]
+    },
+
+    "6E-X5D83": {
+        titre: "BOUZENOUNET Inelle",
+        conseils: [
+            "Revoir le sens du numérateur et du dénominateur.",
+            "S'entraîner à simplifier des fractions.",
+            "Reprendre les exercices corrigés du cours.",
+            "Vérifier que les réponses sont cohérentes."
+        ]
+    },
+
+    "6E-H2P47": {
+        titre: "CHERCHOUR Adam",
+        conseils: [
+            "Revoir le sens du numérateur et du dénominateur.",
+            "S'entraîner à simplifier des fractions.",
+            "Reprendre les exercices corrigés du cours.",
+            "Vérifier que les réponses sont cohérentes."
+        ]
+    },
+
+    "6E-M8Y16": {
+        titre: "DA SILVA Elisa",
+        conseils: [
+            "Revoir le sens du numérateur et du dénominateur.",
+            "S'entraîner à simplifier des fractions.",
+            "Reprendre les exercices corrigés du cours.",
+            "Vérifier que les réponses sont cohérentes."
+        ]
+    },
+
+    "6E-C3J92": {
+        titre: "DEBAILLEUL Margaux",
+        conseils: [
+            "Revoir le sens du numérateur et du dénominateur.",
+            "S'entraîner à simplifier des fractions.",
+            "Reprendre les exercices corrigés du cours.",
+            "Vérifier que les réponses sont cohérentes."
+        ]
+    },
+
+    "6E-V6L35": {
+        titre: "DIMITRIC Mila",
+        conseils: [
+            ""
+        ]
+    },
+
+    "6E-A9Q74": {
+        titre: "FAUBEL Morgane",
+        conseils: [
+            "Revoir le sens du numérateur et du dénominateur.",
+            "S'entraîner à simplifier des fractions.",
+            "Reprendre les exercices corrigés du cours.",
+            "Vérifier que les réponses sont cohérentes."
+        ]
+    },
+
+    "5E-P4V89": {
+        titre: "ZIOUCHE Nelia",
+        conseils: [
+            "Revoir le sens du numérateur et du dénominateur.",
+            "S'entraîner à simplifier des fractions.",
+            "Reprendre les exercices corrigés du cours.",
+            "Vérifier que les réponses sont cohérentes."
+        ]
+    },
+
+    "6E-T5G28": {
+        titre: "FRANCOIS Alix",
+        conseils: [
+            ""
+        ]
+    },
+
+    "6E-N4X63": {
+        titre: "HACHLOUF Mohamed",
+        conseils: [
+            ""
+        ]
+    },
+
+    "6E-F7B19": {
+        titre: "HASSANI Denya",
+        conseils: [
+            ""
+        ]
+    },
+
+    "6E-W2K86": {
+        titre: "HASSANI Shyrine",
+        conseils: [
+            ""
+        ]
+    },
+
+    "6E-D6R41": {
+        titre: "HOFLAND Ujins",
+        conseils: [
+            ""
+        ]
+    },
+
+    "6E-P8H57": {
+        titre: "JOURDAIN Benjamin",
+        conseils: [
+            ""
+        ]
+    },
+
+    "6E-Y5M32": {
+        titre: "LEBRUN Louison",
+        conseils: [
+            "Revoir le sens du numérateur et du dénominateur.",
+            "S'entraîner à simplifier des fractions.",
+            "Reprendre les exercices corrigés du cours.",
+            "Vérifier que les réponses sont cohérentes."
+        ]
+    },
+
+    "6E-G4V69": {
+        titre: "LEROUX Léon",
+        conseils: [
+            "Revoir le sens du numérateur et du dénominateur.",
+            "S'entraîner à simplifier des fractions.",
+            "Reprendre les exercices corrigés du cours.",
+            "Vérifier que les réponses sont cohérentes."
+        ]
+    },
+
+    "6E-Q2C18": {
+        titre: "MOLLIN Kamyl",
+        conseils: [
+            "Revoir le sens du numérateur et du dénominateur.",
+            "S'entraîner à simplifier des fractions.",
+            "Reprendre les exercices corrigés du cours.",
+            "Vérifier que les réponses sont cohérentes."
+        ]
+    },
+
+    "6E-L9T45": {
+        titre: "MONTAIGNE Alice",
+        conseils: [
+            "Revoir le sens du numérateur et du dénominateur.",
+            "S'entraîner à simplifier des fractions.",
+            "Reprendre les exercices corrigés du cours.",
+            "Vérifier que les réponses sont cohérentes."
+        ]
+    },
+
+    "6E-J6A87": {
+        titre: "PAYEN PIQUEMAL Luna",
+        conseils: [
+            "Revoir le sens du numérateur et du dénominateur.",
+            "S'entraîner à simplifier des fractions.",
+            "Reprendre les exercices corrigés du cours.",
+            "Vérifier que les réponses sont cohérentes."
+        ]
+    },
+
+    "6E-Z3N52": {
+        titre: "PERCHE Chloé",
+        conseils: [
+            "Revoir le sens du numérateur et du dénominateur.",
+            "S'entraîner à simplifier des fractions.",
+            "Reprendre les exercices corrigés du cours.",
+            "Vérifier que les réponses sont cohérentes."
+        ]
+    },
+
+    "6E-E8W24": {
+        titre: "TAMAGOULT Lyes",
+        conseils: [
+            "Revoir le sens du numérateur et du dénominateur.",
+            "S'entraîner à simplifier des fractions.",
+            "Reprendre les exercices corrigés du cours.",
+            "Vérifier que les réponses sont cohérentes."
+        ]
+    },
+
+    "6E-U5D71": {
+        titre: "TANCHON Sixtine",
+        conseils: [
+            "Revoir le sens du numérateur et du dénominateur.",
+            "S'entraîner à simplifier des fractions.",
+            "Reprendre les exercices corrigés du cours.",
+            "Vérifier que les réponses sont cohérentes."
+        ]
+    },
+
+    "5E-P4V89": {
+        titre: "TITI Soline",
+        conseils: [
+            "Revoir le sens du numérateur et du dénominateur.",
+            "S'entraîner à simplifier des fractions.",
+            "Reprendre les exercices corrigés du cours.",
+            "Vérifier que les réponses sont cohérentes."
+        ]
+    },
+
+
+    "6E-C7Y43": {
+        titre: "VANDENBROUCKE SENHAJI Louna",
+        conseils: [
+            "Revoir le sens du numérateur et du dénominateur.",
+            "S'entraîner à simplifier des fractions.",
+            "Reprendre les exercices corrigés du cours.",
+            "Vérifier que les réponses sont cohérentes."
+        ]
+    },
+
+    "6E-R4K68": {
+        titre: "VANHULLE Adam",
+        conseils: [
+            "Revoir le sens du numérateur et du dénominateur.",
+            "S'entraîner à simplifier des fractions.",
+            "Reprendre les exercices corrigés du cours.",
+            "Vérifier que les réponses sont cohérentes."
+        ]
+    },
+
+    "6E-0001": {
+        titre: "Ma fiche de conseils",
+        conseils: [
+            "Grâce à cette barre de recherche, tu vas pouvoir accéder à des fiches personnalisées tout au long de l'année. Dans la barre de recherche de la page précédente; tape le code personnel que Mr ROY t'a distribué (il est collé au fond de ton cahier)"
+        ]
+    },
+};
+
+let conseilsActuels = null;
+
+const formulaire = document.getElementById("formulaire-conseils");
+const champCode = document.getElementById("code-eleve");
+const message = document.getElementById("message-conseils");
+const boutonPDF = document.getElementById("telecharger-pdf");
+
+formulaire.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const code = champCode.value.trim().toUpperCase();
+    conseilsActuels = conseilsParCode[code] || null;
+
+    if (!conseilsActuels) {
+        message.textContent =
+            "Code inconnu. Vérifie ton code et réessaie.";
+        boutonPDF.hidden = true;
+        return;
+    }
+
+    message.textContent =
+        "Voici tes conseils : " + conseilsActuels.titre;
+
+    boutonPDF.hidden = false;
+});
+
+boutonPDF.addEventListener("click", function () {
+    if (!conseilsActuels) return;
+
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF();
+
+    pdf.setFont("helvetica", "bold");
+    pdf.setFontSize(18);
+    pdf.text("Maths en Majuscules", 20, 20);
+
+    pdf.setFontSize(15);
+    pdf.text(conseilsActuels.titre, 20, 35);
+
+    pdf.setFont("helvetica", "normal");
+    pdf.setFontSize(12);
+
+    let y = 50;
+
+    const lignes = pdf.splitTextToSize(
+        "Voici quelques pistes pour progresser en mathematiques :",
+        170
+    );
+
+    pdf.text(lignes, 20, y);
+    y += lignes.length * 7 + 8;
+
+    conseilsActuels.conseils.forEach(function (conseil) {
+        const texte = pdf.splitTextToSize("- " + conseil, 165);
+
+        if (y + texte.length * 7 > 275) {
+            pdf.addPage();
+            y = 20;
+        }
+
+        pdf.text(texte, 20, y);
+        y += texte.length * 7 + 5;
+    });
+
+    pdf.save("mes_conseils_5e.pdf");
+});
+</script>
+</body>
 
 
 </body>

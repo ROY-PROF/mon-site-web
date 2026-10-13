@@ -522,3 +522,50 @@ nav ul li {
         padding: 15px;
     }
 }
+
+
+.recherche-conseils {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f4f7fb;
+}
+
+.recherche-conseils h3 {
+    margin-top: 0;
+}
+
+#formulaire-conseils {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+#code-eleve {
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 1rem;
+    max-width: 100%;
+}
+
+#formulaire-conseils button,
+#telecharger-pdf {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #2457a7;
+    color: white;
+}
+
+#message-conseils {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#telecharger-pdf {
+    margin-top: 10px;
+}
+
