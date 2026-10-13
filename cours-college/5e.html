@@ -1022,7 +1022,7 @@ boutonPDF.addEventListener("click", function () {
         y += texte.length * 7 + 5;
     });
 
-    pdf.save("mes_conseils_5e.pdf");
+    window.open(pdf.output("bloburl"), "_blank");
 });
 </script>
 </body>
