@@ -374,21 +374,45 @@ const conseilsParCode = {
     "5E-K7M42": {
         titre: "Alessio AQUILANO",
         conseils: [
-            "Revoir les tables de multiplication.",
-            "S'entraîner 10 minutes par jour.",
-            "Vérifier ses calculs avant de répondre.",
-            "Reprendre les exercices d'automatismes non réussis."
-        ]
+        "COMPORTEMENT\n" +
+        "Alessio est très attentif en classe mais pourrait participer davantage. Cela lui permettrait de participer à la dynamique du groupe classe mais également de mieux comprendre les notions, et éventuellement de mettre le doigt sur des choses qui ne sont pas comprises.",
+
+        "MATÉRIEL\n" +
+        "Points positifs : " +
+        "Objectif de progrès : ",
+
+        "DEVOIRS À LA MAISON\n" +
+        "Points positifs : " +
+        "Objectif de progrès : ",
+
+        "APPRENTISSAGE DU COURS\n" +
+        "Les interrogations de leçons montrent que l'apprentissage du cours est régulier mais il pourrait être encore accentué. Les leçons doivent être sues à chaque cours de maths.",
+
+        "Evaluations\n" +
+        "Les évaluations sont réussies et la moyenne actuelle de 16,69 montre une bonne acquisition des compétences de la période. Il conviendra de consulter les résultats du DS n°1 afin d'avoir une vision pertinente du trimestre d'Alessio."
+    ]
     },
 
     "5E-P9R31": {
         titre: "Julie BARANIECKI",
         conseils: [
-            "Revoir le sens du numérateur et du dénominateur.",
-            "S'entraîner à simplifier des fractions.",
-            "Reprendre les exercices corrigés du cours.",
-            "Vérifier que les réponses sont cohérentes."
-        ]
+        "COMPORTEMENT\n" +
+        "Julie montre un",
+
+        "MATÉRIEL\n" +
+        "Points positifs : " +
+        "Objectif de progrès : ",
+
+        "DEVOIRS À LA MAISON\n" +
+        "Points positifs : " +
+        "Objectif de progrès : ",
+
+        "APPRENTISSAGE DU COURS\n" +
+        "",
+
+        "Evaluations\n" +
+        ""
+    ]
     },
 
     "5E-B4T86": {
@@ -1011,7 +1035,12 @@ boutonPDF.addEventListener("click", function () {
     y += lignes.length * 7 + 8;
 
     conseilsActuels.conseils.forEach(function (conseil) {
-        const texte = pdf.splitTextToSize("- " + conseil, 165);
+        
+const texte = pdf.splitTextToSize(
+    conseil.replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}\u{200D}]/gu, ""),
+    165
+);
+
 
         if (y + texte.length * 7 > 275) {
             pdf.addPage();

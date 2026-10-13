@@ -752,7 +752,12 @@ boutonPDF.addEventListener("click", function () {
     y += lignes.length * 7 + 8;
 
     conseilsActuels.conseils.forEach(function (conseil) {
-        const texte = pdf.splitTextToSize("- " + conseil, 165);
+        
+const texte = pdf.splitTextToSize(
+    conseil.replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}\u{200D}]/gu, ""),
+    165
+);
+
 
         if (y + texte.length * 7 > 275) {
             pdf.addPage();
