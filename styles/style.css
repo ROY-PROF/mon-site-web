@@ -27,7 +27,8 @@ html {
 
 body {
     font-family: var(--font-main);
-    background-image: url('fond.png');
+    background-color: #7f8c8d;
+    background-image: url('../fond.png');
     line-height: 1.7;
     color: var(--text-color);
     background-color: #f7f3ea;
@@ -106,7 +107,7 @@ main {
     color: white;
     margin: 0 auto 40px;
     padding: 25px;
-    background-image: url('fond_tableau.png');
+    background-image: url('../fond_tableau.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
