@@ -700,6 +700,42 @@ const conseilsParCode = {
     "5E-P4V89": {
         titre: "ZIOUCHE Nelia",
         pdf: "../pdf/college/5e/DM/5E-P4V89.pdf"
+    },
+    "5E-0001": {
+        titre: "Mon Devoir Maison",
+        pdf: "../pdf/college/5e/DM/5E-0001.pdf"
+    },
+};
+
+let conseilsActuels = null;
+
+const formulaire = document.getElementById("formulaire-conseils");
+const champCode = document.getElementById("code-eleve");
+const message = document.getElementById("message-conseils");
+const boutonPDF = document.getElementById("telecharger-pdf");
+
+formulaire.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const code = champCode.value.trim().toUpperCase();
+    conseilsActuels = conseilsParCode[code] || null;
+
+    if (!conseilsActuels) {
+        message.textContent = "Code inconnu. Vérifie ton code et réessaie.";
+        boutonPDF.hidden = true;
+        return;
+    }
+
+    message.textContent = "Voici ton DM : " + conseilsActuels.titre;
+    boutonPDF.hidden = false;
+});
+
+boutonPDF.addEventListener("click", function () {
+    if (!conseilsActuels || !conseilsActuels.pdf) return;
+    
+    window.open(conseilsActuels.pdf, "_blank");
+});
+</script>
 </body>
 
 
