@@ -411,922 +411,295 @@
 </footer>
 
 
-<!-- Bibliothèque permettant de créer des PDF -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
 <script>
 const conseilsParCode = {
     "5E-K7M42": {
         titre: "Alessio AQUILANO",
-        conseils: [
-        "COMPORTEMENT\n" +
-        "Alessio est très attentif en classe mais pourrait participer davantage. Cela lui permettrait de participer à la dynamique du groupe classe mais également de mieux comprendre les notions, et éventuellement de mettre le doigt sur des choses qui ne sont pas comprises.",
-
-        "MATÉRIEL\n" +
-        "Points positifs : " +
-        "Objectif de progrès : ",
-
-        "DEVOIRS À LA MAISON\n" +
-        "Points positifs : " +
-        "Objectif de progrès : ",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "Les interrogations de leçons montrent que l'apprentissage du cours est régulier mais il pourrait être encore accentué. Les leçons doivent être sues à chaque cours de maths.",
-
-        "Evaluations\n" +
-        "Les évaluations sont réussies et la moyenne actuelle de 16,69 montre une bonne acquisition des compétences de la période. Il conviendra de consulter les résultats du DS n°1 afin d'avoir une vision pertinente du trimestre d'Alessio."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-K7M42.pdf"
     },
-
     "5E-P9R31": {
         titre: "Julie BARANIECKI",
-        conseils: [
-        "COMPORTEMENT\n" +
-        "Julie montre une attention parfaite en classe. Elle participe activement et se montre pertinente dans ses remarques / questions en classe.",
-
-        "MATÉRIEL\n" +
-        "Rien à signaler, le matériel est toujours apporté en classe",
-
-        "DEVOIRS À LA MAISON\n" +
-        "Les devoirs sont faits rigoureusement, c'est bien",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "Les leçons semblent apprises mais cela pourrait être encore un peu mieux, les dernières évaluations montrant une petite baisse",
-
-        "Evaluations\n" +
-        "La moyenne actuelle de Julie est de 16.61, ce qui montre une parfaite maitrise des notions étudiées"
-    ]
+        pdf: "../pdf/college/5e/DM/5E-P9R31.pdf"
     },
-
     "5E-B4T86": {
         titre: "Mathieu BAURAIN",
-        conseils: [
-            "",
-        ]
+        pdf: "../pdf/college/5e/DM/5E-B4T86.pdf"
     },
-
     "5E-X2N57": {
         titre: "Nourhen BEN ROMDHANE",
-                conseils: [
-        "COMPORTEMENT\n" +
-        "Elève très attentive en classe, mais la participation n'est pas suffisante. Elle est la clef qui permettra à Nourhen de comprendre ce qui l'empêche de progresser. En posant des questions, on met souvent le doigt sur ce qui nous pose problème intellectuellement.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "Les évaluations montrent que le cours n'est pas suffisamment maîtrisé. Les leçons doivent être apprises au jour le jour : plus particulièrement, il faut connaître les définitions et les propriétés, et savoir refaire les exemples. Nourhen doit s'entraîner à retenir son cours et refaire les exemples à chaque fois le soir en rentrant à la maison.",
-
-        "Evaluations\n" +
-        "La moyenne actuelle est très faible, mais Nourhen reste une élève volontaire en classe. En appliquant les conseils précédents, elle pourrait atteindre la moyenne. Les interrogations de chapitres sont constituées d'exercices faits en classe : il faut donc les refaire à la maison avant chaque évaluation, pour être sur de la réussir."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-X2N57.pdf"
     },
-
     "5E-D8F23": {
         titre: "BOUCHAHBOUN Ariléss",
-                conseils: [
-        "COMPORTEMENT\n" +
-        "Ariless est un élève poli et agréable, mais il ne se met pas au travail assez vite. Il est souvent dans la lune et n'ouvre son cahier que bien après ses camarades. Ce retard dans la mise au travail occasionne souvent des difficultés. Il arrive régulièrement qu'Ariless ne prenne pas la correction des exercices, parce qu'il fait autre chose avec les éléments de sa trousse, ou parce qu'il regarde autre chose que le tableau",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "Les évaluations de leçons montrent que le cours n'est pas suffisamment appris. Il doit être récité à un adulte à la maison, les exemples doivent être refaits le soir pour être sur d'avoir compris la notion en cours. ",
-
-        "Evaluations\n" +
-        "Ariless bénéficie de bonnes capacités ce qui lui permet d'avoir une moyenne actuelle de 10,52. Cependant, il faudra regarder de près ses résultats au DS n°1 et appliquer les conseils précédents, pour que la moyenne ne chute pas au fil de l'année."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-D8F23.pdf"
     },
-
     "5E-H6W91": {
         titre: "CHERCHOUR Amir",
-                conseils: [
-        "COMPORTEMENT\n" +
-        "Amir est un élève très concentré en classe, attentif, et qui participe beaucoup. C'est super, il faut continuer comme cela.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "Les évaluations de leçons montrent qu'elles ne sont pas suffisamment maîtrisées. Il faut apprendre son cours au jour le jour, et être sur de la maîtriser avant d'arriver en classe. Eventuellement, si cela est possible, il faut faire réciter les définitions / propriétés à un adulte le soir, ou écrire plusieurs fois son cours pour le retenir.",
-
-        "Evaluations\n" +
-        "La moyenne actuelle est de 12.39, ce qui est honorable mais Amir peut faire mieux en refaisant à chaque fois les exercices avant chaque interrogation, et en accentuant l'apprentissage des leçons."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-H6W91.pdf"
     },
-
     "5E-Q3L48": {
         titre: "CORDIEZ Manon",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-Q3L48.pdf"
     },
-
     "5E-M5C72": {
         titre: "DAHMANI Ryad",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-M5C72.pdf"
     },
-
     "5E-V9J14": {
         titre: "DE BACKER Matheis",
-                conseils: [
-        "COMPORTEMENT\n" +
-        "Elève moteur de la classe. Il faut continuer comme cela !",
-
-        "MATÉRIEL\n" +
-        "+",
-
-        "DEVOIRS À LA MAISON\n" +
-        "+",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "Le cours n'est pas suffisamment appris.",
-
-        "Evaluations\n" +
-        "Comme Mathéis participe et bénéficie de bonnes capacités, il s'en sort avec une moyenne actuelle de 14.59, ce qui est honorable. Mais il a les capacités de faire beaucoup mieux, cela se sent du fait de ses remarques pertinentes et de son attrait pour ce qui est fait en classe. Il possède une vivacité d'esprit impressionnante et une curiosité remarquable : avec plus de travail, il pourrait exceller."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-V9J14.pdf"
     },
-
     "5E-A7G63": {
         titre: "DECANT Méline",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-A7G63.pdf"
     },
-
     "5E-R2Y85": {
         titre: "DERICQUE Louna",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-R2Y85.pdf"
     },
-
     "5E-T4B19": {
         titre: "DESREUX Marley",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-T4B19.pdf"
     },
-
     "5E-N8K36": {
         titre: "ENNEBATI Enzo",
-                conseils: [
-        "COMPORTEMENT\n" +
-        "Début d'année marqué par des problèmes de concentration. Après un coup de fil, Enzo s'est montré bien plus concentré en classe, avec une participation qui s'est accrue.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "L'apprentissage des leçons doit être intensifié, comme le montre les évaluations de leçons de cette période. Il faut, dans la mesure du possible, faire réciter les définitions / propriétés à un adulte, ou les écrire plusieurs fois le soir pour être sur de bien les maîtriser.",
-
-        "Evaluations\n" +
-        "La moyenne actuelle est de 13.18, ce qui est tout à fait honorable. Il faudra consulter les résultats du DS n°1 pour avoir une idée plus précise de ses capacités. Avec un peu plus de rigueur, Enzo pourra exceller dans la suite de cette année."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-N8K36.pdf"
     },
-
     "5E-F3P67": {
         titre: "KHAMALLAH Dounia",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-F3P67.pdf"
     },
-
     "5E-W6D28": {
         titre: "LAWICKI Thélio",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-W6D28.pdf"
     },
-
     "5E-C9X41": {
         titre: "LECONTE Ilyana",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-C9X41.pdf"
     },
-
     "5E-J5H73": {
         titre: "LOUDINI Djenna",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-J5H73.pdf"
     },
-
     "5E-L2V94": {
         titre: "MADJI Amina",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-L2V94.pdf"
     },
-
     "5E-G7Q15": {
         titre: "MUSELET JENAU Raphaël",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-G7Q15.pdf"
     },
-
     "5E-Y4M82": {
         titre: "ROLLAND DAUDRUY Tom",
-                conseils: [
-        "COMPORTEMENT\n" +
-        "Tom est très attentif en classe. Il s'agit, de loin, de l'élève le plus attentif et le plus investi. Malgré ses difficultés, il fait preuve d'une ténacité et d'une envie de réussir.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "L'apprentissage du cours reste insuffisant mais du fait de ses difficultés, il peut être envisageable de ne pas comptabiliser les interrogations de leçons. Pour cela, il faut m'en faire la demande via la messagerie pronote.",
-
-        "Evaluations\n" +
-        "La moyenne reste faible mais il faudra consulter prochainement les résultats du DS n°1, afin d'avoir une idée précise de l'acquisition des compétences de cette période en mathématiques."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-Y4M82.pdf"
     },
-
     "5E-Z6R37": {
         titre: "SMAGGHE FLAMENT Celena",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-Z6R37.pdf"
     },
-
     "5E-E1T59": {
         titre: "TERRAB Laïla",
-                conseils: [
-        "COMPORTEMENT\n" +
-        "Excellente élève mais assez discrète en classe. Il faut prendre confiance car au vu des résultats, des remarques pertinentes et une participation seront bienvenues en classe.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "L'apprentissage des leçons pourrait être accentué, comme le montre les dernières évaluations de leçon.",
-
-        "Evaluations\n" +
-        "La moyenne actuelle est excellente, et témoigne d'une parfaite acquisition des notions."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-E1T59.pdf"
     },
-
     "5E-U8A26": {
         titre: "VIGNOT Raphaël",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-U8A26.pdf"
     },
-
     "5E-S3N64": {
         titre: "WATTEZ Zélie",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-S3N64.pdf"
     },
-
     "5E-B7L52": {
         titre: "AYAICHIA Aïssa",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-B7L52.pdf"
     },
-
     "5E-H3X86": {
         titre: "AYAICHIA Ayoub",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-H3X86.pdf"
     },
-
     "5E-P6D21": {
         titre: "CARON Constantin",
-        conseils: [
-        "COMPORTEMENT\n" +
-        "Attention parfaite, élève très investi, à l'écoute, avec une très bonne participation.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "L'apprentissage des leçons doit être amélioré : il faut, si possible, faire réciter les définitions / propriétés du chapitre en cours, la veille de chaque cours de maths. Il est également possible de recopier les définitions / propriétés plusieurs fois pour être sur de les retenir. Les exemples doivent être refaits le soir en rentrant à la maison.",
-
-        "Evaluations\n" +
-        "Les interrogations écrites montrent des faiblesses dans l'acquisition des notions. Dans les interrogations de fin de chapitre, les élèves sont évalués sur des exercices faits en classe. Il faut donc les refaire avant chaque interrogation, car il n'y a pas de surprise. Pendant les séances, il faut poser des questions dès qu'une difficulté survient, car si l'exercice se retrouve à l'interrogation et n'a pas été compris, Constantin sera en difficulté."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-P6D21.pdf"
     },
-
     "5E-W9K43": {
         titre: "CORNARD Gaspard",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-W9K43.pdf"
     },
-
     "5E-C4R78": {
         titre: "DE PRYCK Ruben",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-C4R78.pdf"
     },
-
     "5E-M2F95": {
         titre: "DENRY Paul",
-        conseils: [
-        "COMPORTEMENT\n" +
-        "Excellent",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "Très bonne maîtrise du cours, élève très sérieux",
-
-        "Evaluations\n" +
-        "Moyenne excellente, ce qui témoigne d'une bonne maîtrise des compétences étudiées durant cette première période. Il faudra également consulter prochainement les résultats du DS n°1 afin d'avoir une vision plus précise du niveau de Paul, mais nous ne devrions pas avoir de surprise."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-M2F95.pdf"
     },
-
     "5E-Y8T16": {
         titre: "DESCARPENTRIES Marvin",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-Y8T16.pdf"
     },
-
     "5E-G5N34": {
         titre: "EESO Maryna",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-G5N34.pdf"
     },
-
     "5E-Q7A62": {
         titre: "ER RAI Anna",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-Q7A62.pdf"
     },
-
     "5E-D3V89": {
         titre: "HSSIKOUR Anyssa",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-D3V89.pdf"
     },
-
     "5E-X6J25": {
         titre: "JOURDAIN Nathan",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-X6J25.pdf"
     },
-
     "5E-R9C47": {
         titre: "KHELIL Wissam Sabrina",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-R9C47.pdf"
     },
-
     "5E-K4W71": {
         titre: "LEBRUN Anaïs",
-        conseils: [
-        "COMPORTEMENT\n" +
-        "Très bonne élève bien que très discrète en classe.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "Le cours peut être davantage maitrisé, comme le montrent les interrogations de leçons réalisées depuis le début de l'année.",
-
-        "Evaluations\n" +
-        "La moyenne actuelle n'est pas vraiment représentative, du fait de l'absence à une interrogation et d'un DM non rendu. Il faudra consulter les résultats du DS n°1 prochainement afin d'avoir une vision plus précise du niveau d'Anais."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-K4W71.pdf"
     },
-
     "5E-F8M32": {
         titre: "LOWYCK Louis",
-        conseils: [
-        "COMPORTEMENT\n" +
-        "Elève dynamique en cours mais attention à ne pas se laisser déconcentrer par moments.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "Le cours est globalement appris d'après les résultats des évaluations de leçons.",
-
-        "Evaluations\n" +
-        "La moyenne témoigne d'une bonne acquisition des notions à la première période. Louis fait preuve de remarques pertinentes et semble avoir un bon niveau en maths. Il faudra être vigilant sur les résultats du DS n°1 afin d'avoir une idée plus précise de sa moyenne. Cela semble néanmoins être un bon début de 5e."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-F8M32.pdf"
     },
-
     "5E-T2P64": {
         titre: "MALAPELLE Clémence",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-T2P64.pdf"
     },
-
     "5E-N5Y18": {
         titre: "MERLIOT Bastien",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-N5Y18.pdf"
     },
-
     "5E-A3H97": {
         titre: "PHILIPPE Mackenzie",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-A3H97.pdf"
     },
-
     "5E-V7B46": {
         titre: "PINHEIRO Evan",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-V7B46.pdf"
     },
-
     "5E-J9Q23": {
         titre: "PINTIAUX Rubén",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-J9Q23.pdf"
     },
-
     "5E-E6L51": {
         titre: "ROLAND Elias",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-E6L51.pdf"
     },
-
     "5E-U4D83": {
         titre: "SIMARRO Lou",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-U4D83.pdf"
     },
-
     "5E-Z2G69": {
         titre: "SZULKOWSKI Kaylann",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-Z2G69.pdf"
     },
-
     "5E-S8X35": {
         titre: "VANDENHEKKE Alexandre",
-        conseils: [
-        "COMPORTEMENT\n" +
-        "Alexandre se montre attentif lorsque son AESH est présente, mais très distrait sinon.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "L'apprentissage du cours semble correct.",
-
-        "Evaluations\n" +
-        "La moyenne est très bonne mais n'est pas représentative des capacités d'Alexandre. En effet, Alexandre a de grosses difficultés dans la restitution de ses idées. Il semble comprendre les notions mais la rédaction de ses idées sur le papier peut parfois poser problèmes. Sans son AESH, la moyenne ne serait pas celle qu'elle est aujourd'hui, il faut donc se montrer prudent. Il faudra également être vigilant sur les résultats du DS n°1 afin d'avoir une idée plus précise de ses capacités."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-S8X35.pdf"
     },
-
     "5E-L5R12": {
         titre: "VERCRUYSSE-TAHRI Maïssane",
-        conseils: [
-        "COMPORTEMENT\n" +
-        "Excellente élève, très investie et à l'écoute. Maissane est toujours dans une posture de travail, et ne cède jamais à la distraction. C'est super.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "Les évaluations de leçons sont en dents de scie mais du fait de ses difficultés, Maissane obtient des résultats honorables.",
-
-        "Evaluations\n" +
-        "La moyenne de 13.51 actuellement montre une bonne acquisition des notions, du fait d'un acharnement et d'une volonté de réussir. Maissane doit continuer comme cela. Elle pose beaucoup de questions en classe mais c'est cela qui lui permet de comprendre, il faut continuer comme cela, c'est bien."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-L5R12.pdf"
     },
-
     "5E-P3K74": {
         titre: "VERROUST- - FIRMIN Samuel",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-P3K74.pdf"
     },
-
     "5E-D7M48": {
         titre: "BACIK Marceau",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-D7M48.pdf"
     },
-
     "5E-X4B91": {
         titre: "BALAZS DEBUCQUOY Léon",
-        conseils: [
-        "COMPORTEMENT\n" +
-        "Léon se montre souvent très distrait en classe. Il n'est pas source de distraction mais profite souvent des bêtises des autres pour se déconcentrer, et malheureusement cela se ressent dans sa moyenne.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "Les leçons ne sont pas apprises correctement mais du fait de ses difficultés de mémorisation, il est possible de ne pas les comptabiliser. Pour cela, il ne faut pas hésiter à m'en faire la demande par message pronote.",
-
-        "Evaluations\n" +
-        "La moyenne actuelle est faible du fait notamment d'un DM non rendu. Léon doit être plus vigilant et moins tête en l'air. Attention, les évaluations de fin de chapitre ne sont constituées que d'exercices faits en classe : il faut les refaire à la maison avant pour être sur de réussir l'interrogation. Il faudra consulter prochainement les résultats du DS n°1 afin d'avoir une idée plus précise de son acquisition des compétences travaillées depuis le début de l'année."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-X4B91.pdf"
     },
-
     "5E-G2T65": {
         titre: "DAEMS Julie",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-G2T65.pdf"
     },
-
     "5E-N9V37": {
         titre: "DECOURTRAY Adrien",
-        conseils: [
-        "COMPORTEMENT\n" +
-        "Elève très dynamique en classe et avec une participation qui fait plaisir. En revanche, Adrien est source de déconcentration pour ses camarades : il réagit parfois de manière excessive à certains évènements (stylo qui tombe, porte qui s'ouvre), ce qui déclenche le fou-rire de ses camarades et perturbe la classe. Il doit canaliser son énergie et la mettre au service de ses apprentissages à 100%.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "Les leçons semblent apprises correctement.",
-
-        "Evaluations\n" +
-        "La moyenne actuelle témoigne d'une solide acquisition des notions. Il faudra consulter prochainement les résultats du DS afin d'avoir une idée plus précise de la moyenne."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-N9V37.pdf"
     },
-
     "5E-C6P82": {
         titre: "DECRUYENAERE Zoé",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-C6P82.pdf"
     },
-
     "5E-R5H24": {
         titre: "DELAHOUTRE Timothé",
-        conseils: [
-        "COMPORTEMENT\n" +
-        "Elève difficile à cerner : Timothé peut se montrer parfois en grande difficulté et en demande d'aide, et parfois très distrait, notamment quand je tourne le dos à la classe. Ce genre de comportement ne fait qu'aggraver ses difficultés et bloque toute marge de progression.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "Bien que Timothé présente des difficultés en orthographe, qui ne sont pas prises en compte dans les notes, il doit veiller à rendre ses devoirs maisons sans fautes de français. Du fait de ses difficultés, des fautes peuvent être acceptées en interrogation mais pour ce qui concerne les devoirs à la maison, il doit prendre le temps de se relire et de corriger ses fautes, car il n'est pas chronométré par le temps, contrairement aux interrogations. C'est comme cela qu'il progressera sur ses fautes de français.",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "Le cours semble appris.",
-
-        "Evaluations\n" +
-        "Les résultats sont corrects malgré une mauvaise note à l'évaluation du chapitre 3. Il faut attendre les résultats du DS n°1 afin d'avoir une idée plus précise de sa moyenne véritable. "
-    ]
+        pdf: "../pdf/college/5e/DM/5E-R5H24.pdf"
     },
-
     "5E-W3A76": {
         titre: "DEMEESTER Raphael",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-W3A76.pdf"
     },
-
     "5E-K8Y19": {
         titre: "DHALLUIN Maxime",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-K8Y19.pdf"
     },
-
     "5E-F4J53": {
         titre: "GODERIS Alessio",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-F4J53.pdf"
     },
-
     "5E-T7L86": {
         titre: "GRISLIN Margaux",
-        conseils: [
-        "COMPORTEMENT\n" +
-        "Elève calme et discrète en classe. Trop de bavardages en début d'année, mais le nouveau placement dans la classe semble avoir résolu le problème.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "",
-
-        "Evaluations\n" +
-        "Il faut accentuer la participation pour augmenter la moyenne, et poser des questions sur ce qui pose soucis. Trop peu de questions sont posées en classe, alors que cela permettrait de résoudre 50% des difficultés. La moyenne actuelle est trop faible et il faut travailler davantage."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-T7L86.pdf"
     },
-
     "5E-B2Q41": {
         titre: "HAMMIA Mohammed Toufik",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-B2Q41.pdf"
     },
-
     "5E-M9D68": {
         titre: "HASNI Sana",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-M9D68.pdf"
     },
-
     "5E-Y3C15": {
         titre: "IEZZI Naëlle",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-Y3C15.pdf"
     },
-
     "5E-H8R72": {
         titre: "LENGLET-BOLLENGIER Maëlle",
-        conseils: [
-        "COMPORTEMENT\n" +
-        "Maëlle ne participe pas assez en classe et ne pose pas assez de questions. C'est une élève agréable et polie mais trop passive face à ses apprentissages. Elle semble avoir baissé les bras par moments.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "Les leçons doivent être apprises avec plus de rigueur : si possible, les faire réciter à la maison. Sinon, il faut recopier plusieurs fois les propriétés / définitions du cours, pour s'assurer de les maitriser pour le cours du lendemain.",
-
-        "Evaluations\n" +
-        "La moyenne est actuellement de 11.47 ce qui est honorable mais Maëlle peut faire beaucoup mieux si elle se mobilise davantage en classe. Il faut participer plus et poser plus de questions : Maëlle ne doit pas sortir de la classe sans avoir poser ses questions, car cela risque de faire chuter sa moyenne au fil de l'année."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-H8R72.pdf"
     },
-
     "5E-V5N39": {
         titre: "MBEMBA Emmanuella",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-V5N39.pdf"
     },
-
     "5E-A4X67": {
         titre: "MOCNY Mahé",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-A4X67.pdf"
     },
-
     "5E-Q6F28": {
         titre: "MOREIRA Leonie",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-Q6F28.pdf"
     },
-
     "5E-J2W94": {
         titre: "PUYPE Juliette",
-        conseils: [
-            ""
-        ]
+        pdf: "../pdf/college/5e/DM/5E-J2W94.pdf"
     },
-
     "5E-E5K83": {
         titre: "THIBAUT Ellie",
-        conseils: [
-        "COMPORTEMENT\n" +
-        "Excellente élève, très attentive et participation impeccable.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "Correct",
-
-        "Evaluations\n" +
-        "Excellente moyenne qui témoigne d'une bonne maitrise des notions de cette première période."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-E5K83.pdf"
     },
-
     "5E-U3G56": {
         titre: "THROCKMORTON Joséphine",
-        conseils: [
-        "COMPORTEMENT\n" +
-        "Elève très attentive, félicitations.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "Non évalué ce trimestre.",
-
-        "Evaluations\n" +
-        "La moyenne parle d'elle même : Joséphine a excellé durant cette période avec 20/20 de moyenne. Attendons les résultats du DS n°1 mais nous ne devrions pas avoir trop de surprise."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-U3G56.pdf"
     },
-
     "5E-S9M27": {
         titre: "VILLAIN Samuel",
-        conseils: [
-        "COMPORTEMENT\n" +
-        "Elève toujours aussi discret mais qui semble un peu plus à l'aise dans la classe.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "Correct",
-
-        "Evaluations\n" +
-        "Les évaluations de fin de chapitre montrent des soucis : Samuel doit revoir les exercices faits en classe, et prendre correctement la correction de ces derniers durant les séances. En effet, les évaluations de fin de chapitre ne sont constituées que d'exercices faits en classe, et si ils sont retravaillés correctement, il n'y a pas de surprise le jour J. Attendons de voir les résultats du DS n°1 pour avoir une idée finale de sa moyenne."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-S9M27.pdf"
     },
-
     "5E-L6T42": {
         titre: "VION Martin",
-        conseils: [
-        "COMPORTEMENT\n" +
-        "Martin est trop bavard et de ce fait, il a été déplacé à une place isolée dans la classe. Suite à cela, j'ai constaté qu'il ne se mettait pas au travail correctement : il joue souvent avec des éléments de sa trousse, n'ouvre pas son cahier en temps et en heure, ce qui occasionne un retard important durant les séances. Il faut souvent le rappeler à l'ordre pour qu'il se raccroche à ce que l'on fait, sans quoi il divague dans ses pensées.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "Correct mais peut être accentué.",
-
-        "Evaluations\n" +
-        "La moyenne actuellement est stable mais risque de chuter si Martin ne se montre pas plus concentré en classe. L'évaluation du chapitre 3 n'a pas été réussie et doit être retravaillée. Attendons de voir le résultat du DS n°1 afin d'avoir une idée plus précise de sa moyenne finale."
-    ]
+        pdf: "../pdf/college/5e/DM/5E-L6T42.pdf"
     },
-
     "5E-P4V89": {
         titre: "ZIOUCHE Nelia",
-        conseils: [
-        "COMPORTEMENT\n" +
-        "Excellent, élève très concentrée et investie.",
-
-        "MATÉRIEL\n" +
-        "",
-
-        "DEVOIRS À LA MAISON\n" +
-        "",
-
-        "APPRENTISSAGE DU COURS\n" +
-        "Parfait",
-
-        "Evaluations\n" +
-        "Moyenne actuelle de 17,50, qui montre une très bonne acquisition des compétences."
-    ]
-    },
-
-    "5E-0001": {
-        titre: "Ma fiche de conseils",
-        conseils: [
-            "Grâce à cette barre de recherche, tu vas pouvoir accéder à des fiches personnalisées tout au long de l'année. Dans la barre de recherche de la page précédente, tape le code personnel que Mr ROY t'a distribué (il est collé au fond de ton cahier)"
-        ]
-    },
-};
-
-let conseilsActuels = null;
-
-const formulaire = document.getElementById("formulaire-conseils");
-const champCode = document.getElementById("code-eleve");
-const message = document.getElementById("message-conseils");
-const boutonPDF = document.getElementById("telecharger-pdf");
-
-formulaire.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const code = champCode.value.trim().toUpperCase();
-    conseilsActuels = conseilsParCode[code] || null;
-
-    if (!conseilsActuels) {
-        message.textContent =
-            "Code inconnu. Vérifie ton code et réessaie.";
-        boutonPDF.hidden = true;
-        return;
-    }
-
-    message.textContent =
-        "Voici tes conseils : " + conseilsActuels.titre;
-
-    boutonPDF.hidden = false;
-});
-
-boutonPDF.addEventListener("click", function () {
-    if (!conseilsActuels) return;
-
-    const { jsPDF } = window.jspdf;
-    const pdf = new jsPDF();
-
-    pdf.setFont("helvetica", "bold");
-    pdf.setFontSize(18);
-    pdf.text("", 20, 20);
-
-    pdf.setFontSize(15);
-    pdf.text(conseilsActuels.titre, 20, 35);
-
-    pdf.setFont("helvetica", "normal");
-    pdf.setFontSize(12);
-
-    let y = 50;
-
-    const lignes = pdf.splitTextToSize(
-        "Voici quelques pistes pour progresser en mathematiques :",
-        170
-    );
-
-    pdf.text(lignes, 20, y);
-    y += lignes.length * 7 + 8;
-
-    conseilsActuels.conseils.forEach(function (conseil) {
-        
-const texte = pdf.splitTextToSize(
-    conseil.replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}\u{200D}]/gu, ""),
-    165
-);
-
-
-        if (y + texte.length * 7 > 275) {
-            pdf.addPage();
-            y = 20;
-        }
-
-        pdf.text(texte, 20, y);
-        y += texte.length * 7 + 5;
-    });
-
-    window.open(pdf.output("bloburl"), "_blank");
-});
-</script>
+        pdf: "../pdf/college/5e/DM/5E-P4V89.pdf"
 </body>
 
 
